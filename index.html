@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cavira Group - OTP & Bulk SMS Communication Partner</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #333;
+      }
+  .navbar {
+        background-color: #4da6ff;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+        font-weight: bold;
+      }
+
+      .navbar-toggler {
+        background-color: white;
+      }
+
+      footer {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 14px;
+        border-top: 1px solid #ccc;
+      }
+
+      .footer-links {
+        margin-top: 10px;
+      }
+
+      .footer-links a {
+        margin: 0 10px;
+        color: #4da6ff;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+      .header {
+        background-color: #666;
+        color: white;
+        padding: 10px 20px;
+        font-size: 20px;
+      }
+
+      .hero-section {
+        background-color: white;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hero-content {
+        max-width: 50%;
+      }
+
+      .hero-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        width: 40%;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 100px;
+        background-color: #e0e0e0;
+      }
+
+      .hero-image-1 {
+        background-color: #d8ddf1;
+      }
+
+      .hero-image-2 {
+        background-color: #f5f5f5;
+      }
+
+      .hero-image-3 {
+        background-color: #b6ddf0;
+      }
+
+      .hero-image-4 {
+        background-color: #daedf9;
+      }
+
+      .company-name {
+        color: #4da6ff;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .tagline {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        background-color: #4da6ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #3a8ad6;
+      }
+
+      .arrow-icon {
+        margin-left: 10px;
+      }
+
+      .info-section {
+        background-color: #b6ddf0;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .info-content {
+        max-width: 60%;
+      }
+
+      .info-title {
+        font-size: 38px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .info-text {
+        line-height: 1.6;
+      }
+
+      .info-image {
+        width: 30%;
+      }
+
+      .star-icon {
+        font-size: 24px;
+        margin-right: 5px;
+      }
+
+      .otp-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        background-color: white;
+      }
+
+      .otp-image {
+        width: 40%;
+      }
+
+      .otp-content {
+        width: 50%;
+      }
+
+      .otp-title {
+        font-size: 34px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .otp-text {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .know-more-button {
+        border: 2px solid #4da6ff;
+        color: #4da6ff;
+        background-color: white;
+        padding: 8px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+
+      .know-more-button:hover {
+        background-color: #4da6ff;
+        color: white;
+      }
+
+      .global-section {
+        background-color: #b6ddf0;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .global-content {
+        width: 45%;
+      }
+
+      .global-image {
+        width: 45%;
+      }
+
+      .global-title {
+        font-size: 34px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .global-text {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>  <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">CAVIRA GROUP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+     <div class="container py-5 my-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+          <div class="company-name">CAVIRA GROUP –</div>
+          <div class="tagline">
+            Reliable OTP & Bulk SMS Communication Partner
+          </div>
+          <a href="#contact" class="cta-button">
+            Get Started Now
+            <span class="arrow-icon">→</span>
+          </a>
+            </div>
+              <div class="col-md-6 col-sm-12 text-center pt-md-0 pt-4">
+          <img
+            src="images/malaysia-1.png"
+            class="img-fluid w-75"
+            alt="Mobile phone with message"
+          />
+           </div>
+        </div>
+      </div>
+    <section style="background: rgba(173, 212, 232, 1);
+">
+     <div class="container py-5">
+        <div class="row">   
+        <div class="col-md-6 col-sm-12">
+          <h2 class="info-title">
+            Secure, Reliable, and Instant Communication
+            <span class="star-icon">★★</span>
+          </h2>
+          <p class="info-text">
+            In today's fast-paced digital world, SMS remains a powerful tool for
+            reaching users instantly. Whether you're sending critical updates,
+            promotional messages, or verification codes, your communication is
+            delivered and read in real time. Its simplicity and universal reach
+            make it the ideal choice for businesses looking to stay connected
+            with their users.
+          </p>
+          <a href="#contact" class="cta-button" style="background-color: #333">
+            Contact us
+            <span class="arrow-icon">→</span>
+          </a>
+        </div>
+        <div class="col-md-6 col-sm-12 text-center">
+          <img
+            src="images/malaysia-2.png" class="img-fluid"
+            alt="Team working on rocket illustration"/>
+        </div>
+        </div>
+       </div>
+       </section>
+  
+     <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <img
+            src="images/malaysia-3.png" class="img-fluid w-50"
+            alt="Two people with secure phone interface"
+            
+          />
+        </div>
+        <div class="col-md-6 col-sm-12 my-auto">
+          <h2 class="otp-title">Seamless OTP and User Verification</h2>
+          <p class="otp-text">
+            Enable smooth and secure onboarding with OTP (One Time Password)
+            authentication. As businesses increasingly move online and
+            prioritize transaction authentication, OTPs add a crucial layer of
+            security while ensuring user convenience. Our robust platform
+            guarantees rapid delivery across various verification scenarios,
+            helping you build trust with customers.
+          </p>
+          <a href="#contact" class="know-more-button">Know More</a>
+        </div>
+      </div>
+      </div>
+      <section style="background: rgba(173, 212, 232, 1);">
+      <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 col-md-6">
+          <h2 class="global-title">Connect Globally with Confidence</h2>
+          <p class="global-text">
+            Expand your reach effortlessly with our global connectivity
+            solutions. We help businesses connect with users across continents
+            through a unified messaging platform. No matter where your audience
+            is located, you'll enjoy superior message deliverability, real-time
+            insights, and fully compliant with regional regulations.
+          </p>
+          <a href="#contact" class="cta-button">
+            Contact Us
+            <span class="arrow-icon">→</span>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img
+            src="images/malaysia-4.png"
+            alt="Global network of connected people"
+            style="width: 100%"
+          />
+        </div>
+      </div>
+      </div>
+        </section>
+          <!-- Services -->
+    <section id="services" class="container   shadow  card  text-start p-4 my-5">
+      <h2>Our Services</h2>
+      <p>We offer a wide range of services including:</p>
+      <ul>
+              <li>Secure OTP</li>
+            <li>Promotional SMS</li>
+            <li>Transactional SMS</li>
+            <li>Accurate OTP</li>
+            <li>Secured SMS</li>
+            <li>WhatsApp API</li>
+            <li>Login Alerts</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->  
+    <section id="contact" class="container mb-5 shadow  card  text-center p-4">
+      <h2>Contact Us</h2>
+      <p>Email: caviragroup@hotmail.com</p>
+      <p>Phone: + 60- 175013136</p>
+      <p>Location: Level 40, No 03, Jalan Bangsar, KL Eco City, 59200, Kuala Lumpur, Wilayah Persekutuan, Kuala Lumpur, Malaysia</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 CAVIRA GROUP Sdn. Bhd. All rights reserved.
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+      </div>
+    </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
